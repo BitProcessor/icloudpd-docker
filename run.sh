@@ -5,10 +5,11 @@ GID=
 VOL_COOKIE=
 VOL_DATA=
 CLIOPTIONS=
+CONTAINER_NAME=
 
 docker pull bitprocessor/icloudpd:latest
 docker run -d \
-   --name icloudpd_maarten \
+   --name ${CONTAINER_NAME} \
    --restart=always \
    --user ${UID}:${GID} \
    --env APPLEID="email@example.com" \
