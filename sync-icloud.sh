@@ -1,5 +1,5 @@
 #!/bin/ash
-set -x
+
 ##### Base Command ####
 ICLOUDPD="/usr/bin/icloudpd --username=${APPLEID} --password=${APPLEPASSWORD} --cookie-directory=/cookie --directory=/data --no-progress-bar ${CLIOPTIONS}"
 
