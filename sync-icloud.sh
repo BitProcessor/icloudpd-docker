@@ -1,5 +1,5 @@
 #!/bin/ash
-
+set -x
 ##### Base Command ####
 ICLOUDPD="/usr/bin/icloudpd --username=${APPLEID} --password=${APPLEPASSWORD} --cookie-directory=/cookie --directory=/data --no-progress-bar ${CLIOPTIONS}"
 
@@ -61,14 +61,8 @@ SetDateTimeFromExif(){
 
 Display2FAExpiry(){
       echo "$(date '+%Y-%m-%d %H:%M:%S') INFO     Two factor authentication cookie expires: ${EXPIRE2FA/ / @ }"
-      if [ "${DAYSREMAINING}" -lt "${NOTIFICATIONDAYS}" ]; then
-         if [ "${SYNCTIME}" -gt "${NEXTNOTIFICATION}" ]; then
-            if [ "${DAYSREMAINING}" -eq 1 ]; then
-               echo "$(date '+%Y-%m-%d %H:%M:%S') WARNING  Final day before two factor authentication cookie expires - Please reinitialise now"
-            else
-               echo "$(date '+%Y-%m-%d %H:%M:%S') WARNING  Only ${DAYSREMAINING} days until two factor authentication cookie expires - Please reinitialise"
-            fi
-         fi
+      if [ "${DAYSREMAINING}" -eq 1 ]; then
+        echo "$(date '+%Y-%m-%d %H:%M:%S') WARNING  Final day before two factor authentication cookie expires - Please reinitialise now"
       fi
 }
 
