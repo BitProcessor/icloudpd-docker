@@ -1,5 +1,3 @@
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3318448eea4548b48a19adf80d1ede6c)](https://www.codacy.com/manual/BitProcessor/icloudpd-docker?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=BitProcessor/icloudpd-docker&amp;utm_campaign=Badge_Grade)
-
 # iCloudPD-docker
 An Alpine based Docker image for ndbroadbent's iCloud Photos Downloader
 Docker Hub: https://hub.docker.com/r/bitprocessor/icloudpd
